@@ -1,0 +1,545 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family:'Inter',sans-serif;
+    background: #09090B;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.login-page{
+    width:100%;
+    max-width:1380px;
+    background:#101014;
+    border-radius:26px;
+    padding:18px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    box-shadow: 0 20px 60px rgba(0,0,0,.45);
+}
+
+.login-left{
+    background:#121217;
+    border-radius:18px 0 0 18px;
+    padding:60px;
+}
+
+.login-right::before{
+    content:"";
+    position:absolute;
+    width:520px;
+    height:520px;
+    border-radius:50%;
+    background:rgba(255,255,255,.04);
+    top:-180px;
+    right:-120px;
+}
+
+.login-right{
+    border-radius:0 18px 18px 0;
+    background:linear-gradient(135deg,#dc6703,#7a00fb);
+    position:relative;
+    overflow:hidden;
+}
+
+.login-right::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    border:2px solid rgba(255,255,255,.04);
+    bottom:-120px;
+    left:-80px;
+}
+
+.ResumeFlow{
+    text-decoration:none;
+    font-size:30px;
+    font-weight:800;
+    background:linear-gradient(90deg,#dc6703,#7a00fb);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    display:inline-block;
+}
+
+.login-logo{
+    margin-bottom:120px;
+}
+
+.login-content{
+    max-width:430px;
+    margin:0 auto;
+}
+
+.login-content h1{
+    color:#FFFFFF;
+    font-size:58px;
+    font-weight:800;
+    line-height:1.1;
+    letter-spacing:-1px;
+    margin-bottom:18px;
+    text-align: center;
+}
+
+.login-content p{
+    color:#9CA3AF;
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:30px;
+    text-align: center;
+}
+
+.login-form{
+    margin-top:40px;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:20px;
+}
+
+.input-group label{
+    color:#FFFFFF;
+    font-size:15px;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+.input-group input{
+    width:100%;
+    height:56px;
+    background:#16161C;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:14px;
+    outline:none;
+    padding:0 18px;
+    color:#FFFFFF;
+    font-size:16px;
+    transition:.3s;
+}
+
+.input-group input:focus{
+    border-color:#dc6703;
+    box-shadow:0 0 0 3px rgba(220,103,3,.15);
+}
+
+.input-group input::placeholder{
+    color:#6B7280;
+}
+
+.password-box{
+    position:relative;
+}
+
+.toggle-password{
+    position:absolute;
+    top:50%;
+    right:18px;
+    transform:translateY(-50%);
+    background:none;
+    border:none;
+    cursor:pointer;
+    font-size:18px;
+    color:#9CA3AF;
+}
+
+.login-btn{
+    width:100%;
+    height:58px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(90deg,#dc6703,#7a00fb);
+    color:#FFFFFF;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+    margin-top: 20px;
+}
+
+.login-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 15px 30px rgba(122,0,251,.18);
+}
+
+.divider{
+    display:flex;
+    align-items:center;
+    margin:35px 0;
+}
+
+.divider::before, .divider::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:rgba(255,255,255,.08);
+}
+
+.divider span{
+    margin:0 18px;
+    color:#9CA3AF;
+    font-size:14px;
+    font-weight:600;
+}
+
+.social-login{
+    display:flex;
+    gap:18px;
+}
+
+.social-btn{
+    flex:1;
+    height:55px;
+    border-radius:14px;
+    background:#16161C;
+    border:1px solid rgba(255,255,255,.08);
+    color:#FFFFFF;
+    font-size:15px;
+    font-weight:600;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.social-btn:hover{
+    border-color:#dc6703;
+    transform:translateY(-2px);
+}
+
+.social-btn img{
+    width:20px;
+    height:20px;
+}
+
+.signup-text{
+    margin-top:40px;
+    text-align:center;
+    color:#9CA3AF;
+    font-size:15px;
+}
+
+.signup-text a{
+    text-decoration:none;
+    color:#dc6703;
+    font-weight:700;
+    transition:.3s;
+}
+
+.signup-text a:hover{
+    color:#7a00fb;
+}
+
+.auth-footer{
+    margin-top:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-top:1px solid rgba(255,255,255,.08);
+    padding-top:25px;
+}
+
+.auth-footer p{
+    color:#6B7280;
+    font-size:14px;
+}
+
+.auth-footer a{
+    text-decoration:none;
+    color:#9CA3AF;
+    font-size:14px;
+    transition:.3s;
+}
+
+.auth-footer a:hover{
+    color:#dc6703;
+}
+
+.preview-content{
+    position:relative;
+    z-index:2;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px;
+}
+
+.preview-badge {
+    background: rgba(255, 255, 255, .12);
+    border-radius: 999px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.preview-content h2 {
+    color: white;
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.preview-content p {
+    color: rgba(255, 255, 255, .85);
+    font-size: 18px;
+    margin-bottom: 50px;
+    max-width: 454px;
+    line-height: 1.5;
+}
+
+.resume-card {
+    background: #121217;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    width: 450px;
+    position:relative;
+    overflow:hidden;
+}
+
+.resume-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg,#dc6703,#7a00fb);
+}
+
+.resume-card:hover{
+    transform:translateY(-8px);
+}
+
+.resume-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(90deg, #dc6703, #7a00fb);
+    border-radius: 50%;
+}
+
+.resume-header h3{
+    color: white;
+    font-size:22px;
+    margin-bottom:2px;
+}
+
+.resume-header span{
+    color:#6B7280;
+    font-size:15px;
+}
+
+.resume-card hr{
+    margin:20px 0;
+    border:none;
+    border-top:2px solid rgba(255,255,255,.08);
+}
+
+.resume-section{
+    margin-bottom:22px;
+}
+
+.resume-section h4{
+    color: white;
+    margin-bottom:12px;
+    font-size:16px;
+}
+
+.line{
+    height:12px;
+    background:#2A2A31;
+    border-radius:20px;
+    margin-bottom:10px;
+}
+
+.short{
+    width:70%;
+}
+
+.resume-card ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills li{
+    padding:8px 14px;
+    border-radius:999px;
+    background:#1D1D24;
+    color:#D1D5DB;
+    font-size:15px;
+    font-weight:600;
+    border: 1px solid rgba(255,255,255,.06);
+}
+
+@media (max-width:768px){
+    body{
+        padding:20px;
+    }
+
+    .login-page{
+        grid-template-columns:1fr;
+        padding:12px;
+
+        height:auto;
+    }
+
+    .login-left{
+        border-radius:18px;
+        padding:35px 25px;
+    }
+
+    .login-logo{
+        margin-bottom:60px;
+        text-align:center;
+    }
+
+    .ResumeFlow{
+        font-size:28px;
+    }
+
+    .login-content{
+        max-width:100%;
+    }
+
+    .login-content h1{
+        font-size:42px;
+        text-align:center;
+    }
+
+    .login-content p{
+        text-align:center;
+        font-size:16px;
+    }
+
+    .login-form{
+        margin-top:35px;
+    }
+
+    .form-options{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .login-btn{
+        width:100%;
+    }
+
+    .social-login{
+        flex-direction:column;
+    }
+
+    .social-btn{
+        width:100%;
+    }
+
+    .auth-footer{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .login-right{
+        margin-top:20px;
+        border-radius:18px;
+        min-height:650px;
+    }
+
+    .preview-content{
+        padding:40px 20px;
+    }
+
+    .preview-badge{
+        font-size:14px;
+    }
+
+    .preview-content h2{
+        font-size:36px;
+    }
+
+    .preview-content p{
+        font-size:16px;
+        margin-bottom:35px;
+    }
+
+    .resume-card{
+        width:100%;
+        max-width:420px;
+        padding:25px;
+    }
+
+    .resume-header{
+        gap:15px;
+    }
+
+    .avatar{
+        width:45px;
+        height:45px;
+    }
+
+    .resume-header h3{
+        font-size:20px;
+    }
+
+    .resume-header span{
+        font-size:14px;
+    }
+
+    .resume-section h4{
+        font-size:15px;
+    }
+
+    .skills{
+        gap:10px;
+    }
+
+    .skills li{
+        font-size:13px;
+        padding:7px 12px;
+    }
+
+    .login-right::before{
+        width:320px;
+        height:320px;
+        top:-120px;
+        right:-120px;
+    }
+
+    .login-right::after{
+        width:220px;
+        height:220px;
+        bottom:-80px;
+        left:-80px;
+    }
+
+    .signup-text{
+        margin-top:30px;
+    }
+}
